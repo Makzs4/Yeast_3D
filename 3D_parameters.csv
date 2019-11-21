@@ -1,0 +1,48 @@
+PLATE PARAMETERS;;;;;;;;;;
+time step;1;;;;;;;;;
+space step;1;;;;;;;;;
+plate x;100;;;;;;;;;
+plate y;100;;;;;;;;;
+plate z;20;;;;;;;;;
+iteration number (time of simulation);500;;;;;;;;;
+initial nutrient density (amount of nutrients/unit cube);50;;;;;;;;;
+diffusion constant (for nutrient in culture media)  max 1/6;0.1;;;;;;;;;
+diffusion constant (for nutrient in air) max 1/6;0;;;;;;;;;
+diffusion constant (for oxigen in culture media) max 1/6;0.1;;;;;;;;;
+diffusion constant (for oxigen in air) max 1/6;0.1;;;;;;;;;
+diffusion constant (for nutrient in cell)  max 1/6;0.16;;;;;;;;;
+diffusion constant (for oxigen in cell)  max 1/6;0.1;;;;;;;;;
+height of culture media (agar);10;;;;;;;;;
+diffusion counter (number of diffusion steps/agent life cycle);5;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+CELL PARAMETERS;species #1;species #2;;;;;;;;
+initial energy;2.5;2.5;0;0;0;0;0;0;0;0
+nutrient uptake;0.4;0.4;0;0;0;0;0;0;0;0
+nutrient uptake efficiency;1;1;0;0;0;0;0;0;0;0
+division threshold;5;5;0;0;0;0;0;0;0;0
+division distance;1.415;1.415;0;0;0;0;0;0;0;0
+death threshold;0.5;0.5;0;0;0;0;0;0;0;0
+metabolic energy;0.1;0.1;0;0;0;0;0;0;0;0
+growth type (0: colony 1: filament);0;0;0;0;0;0;0;0;0;0
+G0 factor;0.05;0.05;0;0;0;0;0;0;0;0
+G0 threshold;1;1;0;0;0;0;0;0;0;0
+branching probability;0.0001;0.01;0;0;0;0;0;0;0;0
+division direction deviation (pi/x or 0 for type 0);0;16;0;0;0;0;0;0;0;0
+initial cell number;1;1;0;0;0;0;0;0;0;0
+initial cell deviation;2.5;2.5;0;0;0;0;0;0;0;0
+initial population center x;35;65;0;0;0;0;0;0;0;0
+initial population center y;35;65;0;0;0;0;0;0;0;0
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+VISUALISATION PARAMETERS;;;;;;;;;;
+draw (1: yes 0:no);1;;;;;;;;;
+visualisation steps;25;;;;;;;;;
+plot resolution (for every dimension of the plate, in x y z order), max value is plate x, plate y and plate z respectively;20;20;20;;;;;;;
