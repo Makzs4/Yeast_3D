@@ -1,4 +1,4 @@
-Ez a szakdolgozatomban említett háromdimenziós ágens-alapú modell foráskódja.
+Ez a szakdolgozatomban említett háromdimenziós ágens-alapú modell forráskódja.
 
 A szimuláció a 'Yeast_3D_1_0' futtatásával történik.
 A legtöbb tagfüggvénynek több verziója is létezik. 
