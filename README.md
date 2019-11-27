@@ -8,7 +8,7 @@ After downloading every file in this repository, open and run 'Yeast_3D_1_0' in 
 I used R2018B during development, so I would recommend using the same version or newer for running it.
 The model's initial parameters can be found in '3D_parameters.csv'.
 Most of the parameters can be changed in accordance with the user's wishes, unless stated otherwise in the .csv file.
-However,  I would advise against running the simulation with huge plate parameters, as it is both unnecessary and will cause the model to be very, very slow. A 100*100*20 simulation space should suffice every need.
+However,  I would advise against running the simulation with huge plate parameters, as it is both unnecessary and will cause the model to be very, very slow. A 100x100x20 simulation space should suffice every need.
 Most functions have multiple versions, as they have been constatly upgraded or completely redone. In 'Yeast_3D_1_0' the best working versions are called.
 
 ## FAQ
