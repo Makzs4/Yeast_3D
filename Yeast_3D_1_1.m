@@ -108,7 +108,7 @@ for i=1:species_number
  end
 end
 
-species_pos = fix_boundary(species_pos,max_x,max_y,max_z);
+species_pos = fix_boundary(species_pos,max_x,max_y,max_z,agar_height);
 
 species_grid=ceil(species_pos); %tells in witch grid each cell is located
 
@@ -119,7 +119,7 @@ nutrient_space(:,:,1:agar_height) = init_nutrient; % filling the nutrient space 
 if isdraw == 1
  depict(t,sx,sy,sz,init_nutrient,nutrient_space,species_number,species_pos,species,species_name,species_div,plotcolors);
 end
-
+   
 profile on;
 
 %%% CELL'S LIFE CYCLE %%%
@@ -157,7 +157,7 @@ for t = 1:dt:max_t
   [survive_cell, nutrient_space] = death_2_0(survive_cell, nutrient_space, species_death_th, species_E, species_grid);
 
   % LENNARD-JONES FORCES %
-  species_pos = lennard_jones_1_0(species_pos,r_cutoff,t_lj,epsilon,sigma,max_force,max_x,max_y,max_z,agar_height);
+  species_pos = lennard_jones_1_0(species_pos,r_cutoff,t_lj,epsilon,sigma,max_force,max_x,max_y,max_z,agar_height); 
    
   [dead_species_pos,dead_species_grid,dead_species,dead_species_step,...
    species_pos,species_grid,species_E,species,species_div,species_div_th,...
