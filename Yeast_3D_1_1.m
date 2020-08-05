@@ -142,9 +142,6 @@ for t = 1:dt:max_t
  species_g0_th=species_g0_th(order,:);
  species_death_th=species_death_th(order,:);
  
-  % LENNARD-JONES FORCES %
-  species_pos = lennard_jones_1_0(species_pos,r_cutoff,t_lj,epsilon,sigma,max_force,max_x,max_y,max_z,agar_height);
-  
   % FEEDING %
   [species_E, nutrient_space] = feeding_1_2(species, popnum, t, species_div, nutrient_uptake, nutrient_uptake_eff, species_grid, g0_factor, metab_E, species_E, nutrient_space);
  
@@ -154,13 +151,14 @@ for t = 1:dt:max_t
   % CELL DVISION %
   [species_E, new_cell_species, colony_new_pos] = division_3_0(t, agar_height, popnum, species, species_pos, species_div,...
                                                                species_E, species_div_th, species_div_distance, species_init_E,...
-                                                               new_cell_species, species_colony_type);
+                                                               new_cell_species, species_colony_type, max_x, max_y, max_z);
                                                            
   % CELL DEATH %                                                          
   [survive_cell, nutrient_space] = death_2_0(survive_cell, nutrient_space, species_death_th, species_E, species_grid);
 
-   colony_new_pos = fix_boundary(colony_new_pos,max_x,max_y,max_z);
- 
+  % LENNARD-JONES FORCES %
+  species_pos = lennard_jones_1_0(species_pos,r_cutoff,t_lj,epsilon,sigma,max_force,max_x,max_y,max_z,agar_height);
+   
   [dead_species_pos,dead_species_grid,dead_species,dead_species_step,...
    species_pos,species_grid,species_E,species,species_div,species_div_th,...
    species_init_E,species_colony_type,species_div_distance,species_g0_th,...
