@@ -1,7 +1,7 @@
 %% Initiate some random positions
 %yeast_pos(:,3) = 20+(22-20).*rand(300,1);
-yeast_pos(:,3) = 20;
 yeast_pos(:,[1,2]) = 35+(65-35).*rand(300,2); %yeast cells with random positions near the agar
+yeast_pos(:,3) = 20;
 plot3(yeast_pos(:,1),yeast_pos(:,2),yeast_pos(:,3),'.');
 xlim([0 100]);
 ylim([0 100]);
